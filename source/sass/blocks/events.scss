@@ -1,0 +1,98 @@
+.events {
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: $color-gray;
+    border: 1px solid $color-default-black;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: calc(448 / 480 * 100%);
+
+      @include vp-1919 {
+        padding-bottom: calc(337 / 360 * 100%);
+      }
+
+      @include vp-1919 {
+        padding-bottom: calc(300 / 320 * 100%);
+      }
+
+      @include vp-1023 {
+        padding-bottom: calc(182 / 195 * 100%);
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-family: $ff-infant;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    color: $color-light;
+
+    @include vp-1919 {
+      font-size: 29px;
+      line-height: 35px;
+    }
+
+    @include vp-1439 {
+      font-size: 26px;
+      line-height: 31px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-gold;
+
+      & ~ .events__img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

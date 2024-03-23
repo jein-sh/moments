@@ -1,0 +1,139 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light;
+  color: $color-dark;
+  padding: 18px;
+  border: none;
+  min-width: 300px;
+
+  user-select: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $color-gold;
+
+    .btn__decor {
+      color: $color-gold;
+    }
+  }
+
+  @include vp-1919 {
+    min-width: 225px;
+    padding: 14px 17px;
+  }
+
+  @include vp-1439 {
+    min-width: 200px;
+    padding: 12px 17px;
+  }
+
+  @include vp-767 {
+    min-width: auto;
+    padding: 7px 9px;
+  }
+
+  &__text {
+    font-family: $ff-gilroy;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+    @include vp-1919 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @include vp-1439 {
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    @include vp-767 {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: -26px;
+    left: -80px;
+    width: 590px;
+    height: 144px;
+    z-index: -1;
+    color: $color-light;
+    transition: color 0.3s ease;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-1919 {
+      width: 442px;
+      height: 107px;
+      bottom: -20px;
+      left: -37px;
+    }
+
+    @include vp-1439 {
+      width: 393px;
+      height: 96px;
+      bottom: -20px;
+      left: -32px;
+    }
+
+    @include vp-767 {
+      width: 247px;
+      height: 60px;
+      bottom: -12px;
+      left: -20px;
+    }
+  }
+}
+
+.btn-icon {
+  width: 90px;
+  height: 90px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: $color-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-gold;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include vp-1919 {
+    width: 68px;
+    height: 68px;
+  }
+
+  @include vp-1439 {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
+}

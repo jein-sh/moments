@@ -1,0 +1,25 @@
+.logo {
+  width: 222px;
+  height: 60px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include vp-1919 {
+    width: 174px;
+    height: 45px;
+  }
+
+  @include vp-1439 {
+    width: 155px;
+    height: 40px;
+  }
+
+  @include vp-767 {
+    width: 102px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,153 @@
+.promo {
+  position: relative;
+  min-height: 1067px;
+  padding: 225px 0 187px;
+
+  @include vp-1919 {
+    min-height: 800px;
+    padding-top: 170px;
+    padding-bottom: 140px;
+  }
+
+  @include vp-1439 {
+    min-height: 711px;
+    padding-top: 150px;
+    padding-bottom: 124px;
+  }
+
+  @include vp-767 {
+    min-height: 550px;
+    padding-top: 408px;
+    padding-bottom: 38px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 187px;
+    background-color: $color-dark;
+    z-index: 10;
+    margin-bottom: -2px;
+    clip-path: polygon(65% 90%, 100% 0, 100% 100%, 0 100%, 0 10%);
+
+    @include vp-1919 {
+      height: 140px;
+    }
+
+    @include vp-1439 {
+      height: 124px;
+    }
+
+    @include vp-767 {
+      height: 38px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-525px, -73px) rotate(5deg);
+    width: 959px;
+    height: 3px;
+    background-color: $color-light;
+    z-index: 8;
+
+    @include vp-1919 {
+      width: 719px;
+      height: 2.2px;
+      transform: translate(-410px, -52px) rotate(5deg);
+    }
+
+    @include vp-767 {
+      width: 195px;
+      height: 1px;
+      transform: translate(-110px, -15px) rotate(5deg);
+    }
+  }
+
+  &__title {
+    font-family: $ff-infant;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    max-width: 738px;
+    margin: 0 0 70px;
+
+    @include vp-1919 {
+      font-size: 60px;
+      line-height: 67px;
+      max-width: 520px;
+      margin-bottom: 50px;
+    }
+
+    @include vp-1439 {
+      font-size: 53px;
+      line-height: 60px;
+      margin-bottom: 46px;
+    }
+
+    @include vp-767 {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      max-width: 400px;
+      text-align: end;
+      margin-left: auto;
+    }
+  }
+
+  &__text {
+    font-size: 32px;
+    line-height: 37px;
+    max-width: 555px;
+    margin: 0 0 88px;
+
+    @include vp-1919 {
+      font-size: 24px;
+      line-height: 29px;
+      max-width: 450px;
+      margin-bottom: 65px;
+    }
+
+    @include vp-1439 {
+      font-size: 21px;
+      line-height: 26px;
+      margin-bottom: 57px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+      text-align: right;
+      max-width: 175px;
+      margin-bottom: 0;
+      margin-left: auto;
+    }
+  }
+
+  .btn {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
